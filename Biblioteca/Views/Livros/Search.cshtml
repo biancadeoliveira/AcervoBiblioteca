@@ -1,0 +1,43 @@
+﻿@model Biblioteca.Models.Livros
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Consultar Acervo";
+}
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Search">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group col-12 col-md-3 float-left">
+                <label for="nome" class="control-label">Nome da obra</label>
+                <input name="nome" class="form-control" />
+            </div>
+            <div class="form-group col-12 col-md-3 float-left">
+                <label for="anoLanc" class="control-label">Ano de lançamento</label>
+                <input type="date" name="anoLanc" class="form-control" />
+            </div>
+            <div class="form-group col-12 col-md-3 float-left">
+                <label for="genero" class="control-label">Gênero</label>
+                <select name="genero" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+            <div class="form-group col-12 col-md-3 float-left">
+                <label for="autor" class="control-label">Autor</label>
+                <select name="autor" class="form-control">
+                    <option></option>
+                </select>
+            </div>
+
+            <div class="form-group col-12">
+                <input type="submit" value="Buscar" class="btn btn-default float-right" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a lista</a>
+</div>

@@ -1,0 +1,19 @@
+﻿nav ul li{
+    display: table;
+    float: left;
+    position: relative;
+    z-index: 10000000;
+}
+
+nav ul li ul{
+    position: absolute;
+    display: none;
+}
+
+nav ul li ul li{
+    float: none;
+}
+
+nav ul li:hover ul{
+    display: block;
+}

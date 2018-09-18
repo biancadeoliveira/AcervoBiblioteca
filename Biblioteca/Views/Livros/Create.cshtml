@@ -1,0 +1,57 @@
+﻿@model Biblioteca.Models.Livros
+
+@{
+    ViewData["Title"] = "Cadastrar Livro";
+}
+@{
+    Layout = "_Layout";
+}
+
+<h3 class="font-weight-normal">Novo</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="anoLanc" class="control-label"></label>
+                <input type="date" asp-for="anoLanc" class="form-control"></input>
+                <span asp-validation-for="anoLanc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="genero" class="control-label"></label>
+                <select asp-for="genero" class="form-control">
+                    <option></option>
+                </select>
+                <span asp-validation-for="genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="autor" class="control-label"></label>
+                <select asp-for="autor" class="form-control">
+                    <option></option>
+                </select>
+                <span asp-validation-for="genero" class="text-danger"></span>
+            </div>
+    </div> 
+    <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="resenha" class="control-label"></label>
+                <textarea asp-for="resenha" class="form-control" rows="10"></textarea>
+                <span asp-validation-for="resenha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a lista</a>
+</div>
+
